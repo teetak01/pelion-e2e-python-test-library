@@ -52,7 +52,7 @@ def client_internal(request):
     if not request.config.getoption('ext_conn') and not request.config.getoption('local_binary'):
         cli.reset()
 
-    cli.wait_for_output('Client registered', 300)
+    cli.wait_for_output('Client registered', 900)
     ep_id = cli.endpoint_id(120)
 
     yield cli
